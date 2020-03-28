@@ -355,4 +355,62 @@ class Nieruchomosc
     {
         return $this->opcjematerialu;
     }
+    /**
+     * @var \Entity\Dom
+     */
+    private $dom;
+
+    /**
+     * @var \Entity\Grunt
+     */
+    private $grunt;
+
+
+    /**
+     * Set dom.
+     *
+     * @param \Entity\Dom|null $dom
+     *
+     * @return Nieruchomosc
+     */
+    public function setDom(\Entity\Dom $dom = null)
+    {
+        $this->dom = $dom;
+
+        return $this;
+    }
+
+    /**
+     * Get dom.
+     *
+     * @return \Entity\Dom|null
+     */
+    public function getDom()
+    {
+        return $this->dom;
+    }
+
+    /**
+     * Set grunt.
+     *
+     * @param \Entity\Grunt|null $grunt
+     *
+     * @return Nieruchomosc
+     */
+    public function setGrunt(\Entity\Grunt $grunt = null)
+    {
+        $this->grunt = $grunt;
+
+        return $this;
+    }
+
+    /**
+     * Get grunt.
+     *
+     * @return \Entity\Grunt|null
+     */
+    public function getGrunt()
+    {
+        return $this->grunt;
+    }
 }

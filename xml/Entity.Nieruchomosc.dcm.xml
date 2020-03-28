@@ -12,6 +12,9 @@
         <field name="cena_m2" type="float" />
 
         <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc" />
+        <one-to-one field="dom" target-entity="Dom" mapped-by="nieruchomosc" />
+        <one-to-one field="grunt" target-entity="Grunt" mapped-by="nieruchomosc" />
+
         <many-to-one field="miasto" target-entity="Miasto" />
 <!--        <many-to-one field="powiat" target-entity="Powiat" />-->
 <!--        <many-to-one field="wojewodztwo" target-entity="Wojewodztwo" />-->
