@@ -6,14 +6,29 @@
             <generator strategy="AUTO" />
         </id>
         <field name="typ_oferty" type="string" length="5" />
-        <field name="numer" type="string" />
+<!--        <field name="numer" type="string" />-->
         <field name="powierzchnia" type="float" />
         <field name="cena" type="float" />
         <field name="cena_m2" type="float" />
 
-        <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc" />
-        <one-to-one field="dom" target-entity="Dom" mapped-by="nieruchomosc" />
-        <one-to-one field="grunt" target-entity="Grunt" mapped-by="nieruchomosc" />
+<!--        <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc" />-->
+        <one-to-one field="dom" target-entity="Dom" mapped-by="nieruchomosc">
+            <cascade>
+                <cascade-persist />
+            </cascade>
+        </one-to-one>
+
+        <one-to-one field="grunt" target-entity="Grunt" mapped-by="nieruchomosc" >
+            <cascade>
+                <cascade-persist />
+            </cascade>
+        </one-to-one>
+
+        <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc">
+            <cascade>
+                <cascade-persist />
+            </cascade>
+        </one-to-one>
 
         <many-to-one field="miasto" target-entity="Miasto" />
 <!--        <many-to-one field="powiat" target-entity="Powiat" />-->

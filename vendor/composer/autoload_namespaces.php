@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Repository\\' => array($baseDir . '/'),
     'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src'),
     'Entity\\' => array($baseDir . '/'),
 );
